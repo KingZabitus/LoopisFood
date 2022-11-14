@@ -1,27 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loopis Food</title>
+    <title>Loops Food</title>
+    <script src="LoopsFoodscript.js" defer></script>
+    <link rel="stylesheet" href="LoopsFoodstyle.css">
 </head>
 <body>
-</body>
-    <div id="cadastro">
-        <h1>Cadastro</h1>
-        <h3>Nome do Produto</h3>
-        <input id="nome-do-produto">
-        <h3>Preço</h3>
-        <input id="preço" type="number">
-        <h3>Promoção</h3>
-        <input id="sim" type="radio" name="promocao" value="sim"><h3>Sim</h3> 
-        <input id="nao" type="radio" name="promocao" value="nao"><h3>Não</h3>
-        <button id="salvar">Salvar</button>
+    <div id="titulo">
+        <img id="cafe" src="https://cdn-icons-png.flaticon.com/512/1079/1079082.png">
+        <h1 class="titulo1">Loops </h1>
+        <h1 class="titulo2">Café's</h1>
     </div>
-    <div id="produtos">
-        
-    </div>
-    <script src="script1.js"></script>
+    <div id="container">
+        <!-- Este codigo corresponde ao desafio da Loops, com o objetivo de criar um site/cardapio virtual que consite no cadastro de novos pratos, com ou sem promoção, com uma opção para remover o prato não desejado e , os pratos salvos, serão exibidos em um campo imediatamente ao lado do cadastro -->
+        <div id="cadastro">
+            <h2>Cadastro</h2>  
+            <div class="alinhar">
+                <!-- Pegando o nome do prato. Estou utilizando o id = "disheName" para recuperar o valor posteriormente -->
+                <p class="titulos">Nome do prato</p>
+                <input type="text" id="disheName" placeholder="Produto...">
+            </div>
+            
+            <div class="alinhar">
+                <!-- Pegando o preço do prato. Estou utilizando o id = "dishePrice" para recuperar o valor posteriormente -->
+                <p class="titulos">Preço</p>
+                <input type="number" id="dishePrice" placeholder="Preço...">
+            </div>
+            <div class="alinhar" >
+                <p class="titulos">Promoção</p>
+                <!-- Input para verificar se o prato terá desconto ou não. Uso o name = "promo" para que possa selecionar apenas uma das opções, e uso os id's = "sim" e "nao" para diferenciá-los entre se -->
+                <div class="promo">
+                    <input type="radio" name="promocao" id="sim"><p>Sim</p>
+                </div>
+                <div class="promo">
+                    <input type="radio" name="promocao" id="nao"><p>Não</p>
+                </div>
+            </div>
+            <div class="alinhar" id="botaoSalvar">
+                <!-- Botão do para que as informações anteriores sejam salvas -->
+                <button type="submit" id="buttonSave">Salvar</button>
+            </div>
+        </div>
+        <div id="cardapio">
+            <h2>Produtos</h2>
+            <!-- Local onde será criado a lista de pratos à salvar -->
+            <div id="produtos">
+            
+            </div>
+        </div>
+    </div>    
 </body>
 </html>
